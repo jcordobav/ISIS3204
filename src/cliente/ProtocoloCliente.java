@@ -91,7 +91,7 @@ public class ProtocoloCliente
 	public static void createFile(String content, String id, String cantConexiones) throws IOException
 	{   
 		try {
-            PrintWriter writer = new PrintWriter("./Data/ArchivosRecibidos/Cliente" + id + "-Prueba" + cantConexiones + ".txt", "UTF-8");
+            PrintWriter writer = new PrintWriter("home/servidor/aplicacion/ISIS3204/Data/ArchivosRecibidos/Cliente" + id + "-Prueba" + cantConexiones + ".txt", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {
@@ -112,7 +112,7 @@ public class ProtocoloCliente
         String h2 = h.replace("/", "-");
         
 		try {
-            PrintWriter writer = new PrintWriter("./Data/logs/" + h2 + "-client" + idCliente + ".log", "UTF-8");
+            PrintWriter writer = new PrintWriter("home/servidor/aplicacion/ISIS3204/Data/logs/" + h2 + "-client" + idCliente + ".log", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {

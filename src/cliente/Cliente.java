@@ -10,7 +10,8 @@ import java.security.NoSuchAlgorithmException;
 public class Cliente 
 {
 	public static final int PUERTO = 3400;
-	public static final String SERVIDOR = "localhost";
+	public static final String SERVIDOR = "192.168.172.130";
+	//public static final String SERVIDOR = "localhost";
 	
 	public static void main(String[] args) throws IOException, NoSuchAlgorithmException
 	{
