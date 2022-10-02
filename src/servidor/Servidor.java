@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -23,6 +25,9 @@ public class Servidor
 		boolean continuar = true;
 		log = "";
 		
+		Path path = Paths.get("");
+		String directoryName = path.toAbsolutePath().toString();
+		System.out.println("Current Working Directory is = " +directoryName);
 		
 		Scanner leer = new Scanner(System.in);
 		
@@ -78,6 +83,10 @@ public class Servidor
 	}
 	
 	/**
+	 * 
+	 * 
+	 * 
+	 * 
 	 * 
 	 * @param content content that is going to be in the log archive
 	 * @throws IOException
