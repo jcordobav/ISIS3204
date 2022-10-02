@@ -95,7 +95,7 @@ public class ProtocoloServidor
 	{
 		String archive = "";
 
-		File doc = new File("aplicacion/ISIS3204/Data/" + ar + ".txt");
+		File doc = new File("/home/servidor/aplicacion/ISIS3204/Data/" + ar + ".txt");
 		
 		tamanoArchivo = doc.length()/(1024*1024);
 
