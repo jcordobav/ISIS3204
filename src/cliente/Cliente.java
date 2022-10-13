@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 
 public class Cliente 
@@ -18,6 +20,10 @@ public class Cliente
 		Socket socket = null;
 		PrintWriter escritor = null;
 		BufferedReader lector = null;
+		
+		Path path = Paths.get("");
+		String directoryName = path.toAbsolutePath().toString();
+		System.out.println("Current Working Directory is = " +directoryName);
 		
 		System.out.println("Cliente... \n");		
 		try {
