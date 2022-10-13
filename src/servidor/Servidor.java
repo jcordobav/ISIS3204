@@ -45,7 +45,7 @@ public class Servidor
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		int clientesAceptados = 1;
+		int clientesAceptados = 0;
 		while(continuar)
 		{
 			if(clientesAceptados % cantClientes == 0)
