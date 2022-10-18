@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Cliente 
 {
-	public static final int PUERTO = 3400;
+	public static final int PUERTO = 3500;
 	public static final String SERVIDOR = "192.168.172.139";
 	//public static final String SERVIDOR = "localhost";
 	

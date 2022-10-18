@@ -14,7 +14,7 @@ import java.util.concurrent.CyclicBarrier;
 
 public class Servidor 
 {
-	private final static int PUERTO = 3400;
+	private final static int PUERTO = 3500;
 	private static int numeroThreads = 0;
 	private static String nombreArchivo;
 	private static String log;
