@@ -99,7 +99,7 @@ public class Servidor
         String h2 = h.replace("/", "-");
         
 		try {
-            PrintWriter writer = new PrintWriter("./Data/logs/" + h2 + "-server.log", "UTF-8");
+            PrintWriter writer = new PrintWriter("/home/servidor/aplicacion/ISIS3204/Data/logs/" + h2 + "-server.log", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {
