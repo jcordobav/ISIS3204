@@ -43,6 +43,8 @@ public class Cliente
 		lector.close();
 		socket.close();
 		
+		
+		
 	}
 
 }
