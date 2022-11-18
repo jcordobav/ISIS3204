@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
@@ -91,7 +93,10 @@ public class ProtocoloCliente
 	public static void createFile(String content, String id, String cantConexiones) throws IOException
 	{   
 		try {
-            PrintWriter writer = new PrintWriter("/home/servidor/aplicacion/ISIS3204/Data/ArchivosRecibidos/Cliente" + id + "-Prueba" + cantConexiones + ".txt", "UTF-8");
+			Path path = Paths.get("");
+			String directoryName = path.toAbsolutePath().toString();
+			String nueva = directoryName.replace("bin", "");
+            PrintWriter writer = new PrintWriter(nueva + "Data/ArchivosRecibidos/Cliente" + id + "-Prueba" + cantConexiones + ".txt", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {
@@ -112,7 +117,10 @@ public class ProtocoloCliente
         String h2 = h.replace("/", "-");
         
 		try {
-            PrintWriter writer = new PrintWriter("/home/servidor/aplicacion/ISIS3204/Data/logs/" + h2 + "-client" + idCliente + ".log", "UTF-8");
+			Path path = Paths.get("");
+			String directoryName = path.toAbsolutePath().toString();
+			String nueva = directoryName.replace("bin", "");
+            PrintWriter writer = new PrintWriter(nueva + "Data/logs/" + h2 + "-client" + idCliente + ".log", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {

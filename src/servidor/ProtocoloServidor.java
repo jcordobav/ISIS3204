@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.BrokenBarrierException;
@@ -94,8 +96,10 @@ public class ProtocoloServidor
 	public static String readFile(String ar) throws IOException
 	{
 		String archive = "";
-
-		File doc = new File("/home/servidor/aplicacion/ISIS3204/Data/" + ar + ".txt");
+		Path path = Paths.get("");
+		String directoryName = path.toAbsolutePath().toString();
+		String nueva = directoryName.replace("bin", "");
+		File doc = new File(nueva + "Data/" + ar + ".txt");
 		
 		tamanoArchivo = doc.length()/(1024*1024);
 
